@@ -4,6 +4,7 @@
 \documentclass[a4paper,10pt]{article}
 
 % A Few Useful Packages
+\usepackage[margin=0.5in]{geometry}
 \usepackage{longtable}
 \usepackage{marvosym}
 \usepackage{fontspec}                                   %for loading fonts
@@ -15,6 +16,13 @@
 \usepackage{supertabular}                               %for Grades
 \usepackage{titlesec}					%custom \section
 \usepackage{multirow}
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
 % Setup hyperref package, and colours for links
 %\usepackage{hyperref}
@@ -26,6 +34,10 @@
             urlcolor  = blue,
             citecolor = blue,
             anchorcolor = blue]{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+
+\addtolength{\oddsidemargin}{-.575in}
+
 
 
 
@@ -51,12 +63,16 @@
 
 % --------------------BEGIN DOCUMENT----------------------
 \begin{document}
+\nobibliography{library.bib}
+\bibliographystyle{unsrt}
 \pagestyle{empty} % non-numbered pages
 
 \font\fb=''[cmr10]'' %for use with \LaTeX command
 
 % --------------------TITLE-------------
+
 \par{\centering
+  \vspace{-2ex}
   {\Huge Nathan {Hughes}
   }\bigskip\par}
 
@@ -66,7 +82,7 @@
 \begin{center}
   \begin{tabular}{rl}
     \textsc{Date of Birth:} & 05                May 1994 \\
-    \textsc{email:}     & \href{mailto:nah26@aber.ac.uk}{nah26@aber.ac.uk} | \href{mailto:nathan1hughes@gmail.com}{nathan1hughes@gmail.com} \\
+    \textsc{email:}     & \href{mailto:Nathan.Hughes@jic.ac.uk}{Nathan.Hughes@jic.ac.uk} | \href{mailto:nathan1hughes@gmail.com}{nathan1hughes@gmail.com} \\
     \textsc{website:}  & \href{sirsharpest.github.io}{sirsharpest.github.io}
   \end{tabular}
 \end{center}
@@ -89,7 +105,7 @@ I am an extremely driven and motivated PhD student, in all things; I make it my 
 
     %%%%
 
-    &Aberystwyth University -  Demonstrator \\ \textsc{Sept 2015 - Current}
+    &Aberystwyth University -  Demonstrator \\ \textsc{Sept 2015 - June 2018}
     &\footnotesize{I was a mentor to first and second year students during their workshops. Specifically I helped to reinforce the knowledge students learn in their lectures.}\\\multicolumn{2}{c}{} \\
     %%%%
 
@@ -105,31 +121,30 @@ I am an extremely driven and motivated PhD student, in all things; I make it my 
 \section{Education}
 \begin{tabular}{rll}
 
-  \textsc{Oct} 2018 - Current & \textbf{PhD in Computation Modelling} &   \\
+  \textsc{Oct} 2018 - Current & \textbf{PhD - Computation Modelling} &   \\
 
-  \textsc{June} 2018  & \textbf{BSc Computer Science} & First Class Honours \\
+  \textsc{June} 2018  & \textbf{BSc - Computer Science} & First Class Honours \\
 
-  \textsc{May} 2014& \textbf{BTEC Extended Diploma} & Final Grade: Distinction
-  \\
-  \textsc{March} 2012& \textbf{Gymnastics Coaching Grade 3} & Final Grade: Pass
+  \textsc{May} 2014& \textbf{Diploma - Software Engineering} & Final Grade: Distinction
 
 \end{tabular}
 
 
 \section{Publications}
 
-  \begin{itemize}
+\begin{enumerate}
+\item{\bibentry{hughesNonDestructiveHighContentAnalysis2017}}
+\item{\bibentry{cook2018barley}}
+\item{\bibentry{unpublishedMe}}
+\end{enumerate}
 
-    \item N.Hughes et al. Non-destructive, high-content analysis of wheat grain traits using X-ray micro computed tomography - \href{https://doi.org/10.1186/s13007-017-0229-8}{https://doi.org/10.1186/s13007-017-0229-8}
 
-    \item F.Cook et al. Barley lys3 mutants are unique amongst shrunken-endosperm mutants in having abnormally large embryos - \href{https://doi.org/10.1016/j.jcs.2018.04.013}{https://doi.org/10.1016/j.jcs.2018.04.013}
-
-    \item N.Hughes et al. Modelling effects of domestication in \textit{Triticum} through novel computer vision techniques - Currently work in progress
-
-  \end{itemize}
 
 \section{Research Experience}
-My experience has been primarily focused on genomic and phenotypic research in plant \\science. Specifically computer vision analysis and QTL mapping of seed and grain traits. Additionally I have designed and built automated systems specifically for gathering and generating gravimetric data.
+
+My current project is focused on uncovering the mechanisms in which cell-to-cell communication operates, specifically in examining \textit{plasmodesmata} and how molecules move from one cell to another.
+
+Previously my work has been primarily focused on genomic and phenotypic research in crop \\science. Specifically computer vision analysis and QTL mapping of seed and grain traits. Additionally I have spent considerable time designing and building automated systems specifically for gathering and generating scientific data.
 
 
 \section{Skills}
@@ -177,9 +192,14 @@ My experience has been primarily focused on genomic and phenotypic research in p
 \end{tabular}
 
 
-\section{Self-driven Projects}
+\section{Examples of work}
+
+
 
 \begin{tabular}{r|p{10cm}}
+
+  Grain Analysis Software  & To streamline a data analysis pipeline that I created, I developed a set of tools to allow for straight-forward analysis of 3D grain parameters. This software allows a user to run statistical analysis in a reproducible environment (\href{https://github.com/SirSharpest/Grain\_Analyser\_GUI}{https://github.com/SirSharpest/Grain\_Analyser\_GUI})\\
+\\
   Biology of the cell course & Having fallen in love with biology whilst studying computer science at university, I have started a small project to make a openly available crash-course style of notes for anyone from a non-biology background. I contribute to it quite regularly and plan to complete full series of biology information (\href{https://github.com/SirSharpest/Bio-Cramming}{https://github.com/SirSharpest/Bio-Cramming})\\
   \\
   Image analysis software& As a side project I have started building a Rubik's cube solver which uses OpenCV and AStar IDS to provide instructions for a user to complete a cube puzzle. This is in early stages but progress can be seen at my GitHub which is updated regularly (\href{https://github.com/SirSharpest/Rubkis-Cube-Solver}{https://github.com/SirSharpest/Rubkis-Cube-Solver})
@@ -187,13 +207,16 @@ My experience has been primarily focused on genomic and phenotypic research in p
 
 \section{References}
 \begin{tabular}{ll}
-  \textsc{Prof J. Doonan} & \textbf{Director NPPC} | \href{jhd2@aber.ac.uk}{jhd2@aber.ac.uk}
+  \textsc{Prof M. Morris} & \textbf{Plant Health Programme Leader, JIC
+} | \href{Richard.Morris@jic.ac.uk}{Richard.Morris@jic.ac.uk}
   \\
-  \textsc{Dr H. Dee} & \textbf{Senior Lecturer} | \href{hmd@aber.ac.uk}{hmd@aber.ac.uk}
+  \textsc{Prof J. Doonan} & \textbf{Director, NPPC} | \href{jhd2@aber.ac.uk}{jhd2@aber.ac.uk}
+  \\
+  \textsc{Dr H. Dee} & \textbf{Senior Lecturer, Aberystwyth University} | \href{hmd@aber.ac.uk}{hmd@aber.ac.uk}
   \\
   \textsc{Dr C. Sauze} & \textbf{Data Manager NPPC} | \href{cos@aber.ac.uk}{cos@aber.ac.uk}
 \\
-  \textsc{Mr P. Greenwood} & \textbf{BMC Project Manager} | \href{PGreenwood@belfastmet.ac.uk}{PGreenwood@belfastmet.ac.uk}
+  \textsc{Mr P. Greenwood} & \textbf{Project Manager, BMC} | \href{PGreenwood@belfastmet.ac.uk}{PGreenwood@belfastmet.ac.uk}
   \\
 \end{tabular}
 \end{document}
