@@ -18,6 +18,8 @@
 \usepackage{multirow}
 \usepackage{bibentry}
 \makeatletter\let\saved@bibitem\@bibitem\makeatother
+\usepackage{natbib}
+
 
 \tolerance=1
 \emergencystretch=\maxdimen
@@ -63,7 +65,7 @@
 % --------------------BEGIN DOCUMENT----------------------
 \begin{document}
 \nobibliography{library.bib}
-\bibliographystyle{unsrt}
+\bibliographystyle{abbrv}
 \pagestyle{empty} % non-numbered pages
 
 \font\fb=''[cmr10]'' %for use with \LaTeX command
@@ -80,6 +82,7 @@
 
 \begin{center}
   \begin{tabular}{rl}
+    \textsc{Nationality} & Irish/British  \\
     \textsc{Date of Birth:} & 05                May 1994 \\
     \textsc{email:}     & \href{mailto:Nathan.Hughes@jic.ac.uk}{Nathan.Hughes@jic.ac.uk} | \href{mailto:nathan1hughes@gmail.com}{nathan1hughes@gmail.com} \\
     \textsc{website:}  & \href{sirsharpest.github.io}{sirsharpest.github.io}
@@ -88,8 +91,7 @@
 
 
 \section{Personal Statement}
-I am an extremely driven and motivated PhD student, in all things; I make it my goal everyday to improve upon the last. With a true thirst for knowledge and desire for understanding, it is my long-term goal to pursue a career in academia.
-
+I am an extremely driven and motivated PhD student. With a true thirst for knowledge and desire for understanding, it is my long-term goal to pursue a career in academia.
 
 \section{Employment History}
   \begin{longtable}{r|p{9cm}}
@@ -130,11 +132,12 @@ I am an extremely driven and motivated PhD student, in all things; I make it my 
 
 \section{Publications}
 
-\begin{enumerate}
+\begin{itemize}
 \item{\bibentry{hughesNonDestructiveHighContentAnalysis2017}}
+\item{\bibentry{hughesAnalysisWheatGrain}}
 \item{\bibentry{cook2018barley}}
 \item{\bibentry{unpublishedMe}}
-\end{enumerate}
+\end{itemize}
 
 
 
@@ -142,10 +145,10 @@ I am an extremely driven and motivated PhD student, in all things; I make it my 
 
 My current project is focused on uncovering the mechanisms in which cell-to-cell communication operates, specifically in examining \textit{plasmodesmata} and how molecules move from one cell to another.
 
-Previously my work has been primarily focused on genomic and phenotypic research in crop \\science. Specifically computer vision analysis and QTL mapping of seed and grain traits. Additionally I have spent considerable time designing and building automated systems for gathering and generating scientific data.
+Previously my work has been primarily focused on genomic and phenotypic research in crop science. Specifically computer vision analysis and QTL mapping of seed and grain traits. Additionally I have spent considerable time designing and building automated systems for gathering and generating scientific data.
 
 
-\section{Skills}
+\section{Skills and Knowledge}
 
 
 \begin{tabular}{ll}
@@ -186,12 +189,12 @@ Previously my work has been primarily focused on genomic and phenotypic research
 \end{tabular}
 
 
-\section{Talks}
+\section{Research Talks / Lectures}
 \begin{tabular}{ll}
-
+  \textsc{Genetics Society} & \textbf{Research presentation} | \href{http://www.genetics.org.uk/}{http://www.genetics.org.uk/} \\
   \textsc{FOSDEM} & \textbf{Lightning Talk} | \href{https://fosdem.org/2017/schedule/}{https://fosdem.org/2017/schedule/} \\
-  \textsc{BCS} & \textbf{Show and Tell} | \href{http://www.midwales.bcs.org/show-and-tell-events/}{http://midwales.bcs.org/show-and-tell-events/}\\
-  \textsc{Aberystywth U} & \textbf{Bioinformatics workshop} | \href{www.users.aber.ac.uk/msn/abw/index.html}{www.users.aber.ac.uk/msn/abw/}
+  \textsc{BCS} & \textbf{Project update} | \href{http://www.midwales.bcs.org/show-and-tell-events/}{http://midwales.bcs.org/show-and-tell-events/}\\
+  \textsc{Aberystywth U} & \textbf{Bioinformatics Conference} | \href{www.users.aber.ac.uk/msn/abw/index.html}{www.users.aber.ac.uk/msn/abw/}
 
 \end{tabular}
 
